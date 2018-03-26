@@ -46,7 +46,8 @@ console.log("----------------------------------------------------------");
  Daca returneaza true, elementul in cauza nu va fi inclus de functia parinte in array-ul rezultat. 
  Daca returneaza false va fi inclus.
 */
-console.log(reject(demoArr, iterator)); // sa returneze un array de obiecte cu height < 10
+
+console.log(reject(demoArr, 'height')); // sa returneze un array de obiecte cu height < 10
 
 /*
 5. Sa se scrie o functie care returneaza elementul cu culoarea crimson
@@ -97,20 +98,21 @@ console.log("----------------------------------------------------------");
 /*
 9. Sa se scrie o functie care returneaza un obiect in care se numara de cate ori apare fiecare culoare in parte in array-ul de obiecte. {red: 2, blue: 1, etc...}
 */
+console.log("Probl.9");
 function noColors(arr) {
     const obj = new Object();
     arr.filter((el, index, a) => {
         const color = a[index].color;
-        if (!obj.hasOwnProperty(color)) {
-            obj[color] = 1;
-        } else {
-            obj[color]++;
-        }
+        !obj.hasOwnProperty(color) ? obj[color] = 1 : obj[color]++;
+        // OR
+        // !(color in obj) ? obj[color] = 1 : obj[color]++;        
     });
     return obj
 }
 
 console.log(noColors(demoArr));
+console.log("----------------------------------------------------------");
+
 
 /*
 10. Sa se scrie o functie care returneaza un array cu toate elementele care au o culoare unica. Oricare element dupa primul care are o culoare care s-ar repeta nu este inclus in array.
@@ -124,6 +126,7 @@ console.log("Probl.11");
 
 function inversNumber(a, b) {
     return [a, b] = [b, a];
+    // OR
     // return {a, b} = {b, a};
 }
 console.log(inversNumber(7, 2));
