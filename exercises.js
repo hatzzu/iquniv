@@ -47,6 +47,16 @@ console.log("----------------------------------------------------------");
  Daca returneaza false va fi inclus.
 */
 
+// NU AM INTELES EXACT CERINTA
+function iterator(obj, key) {
+    return obj.hasOwnProperty(key) ? delete obj[key] : false;
+}
+function reject(arr, key) {
+    return arr.filter(el => {
+        return el[key] < 10 ? iterator(el, key) : el;
+    })
+}
+//console.log(reject(demoArr, iterator)); // sa returneze un array de obiecte cu height < 10
 console.log(reject(demoArr, 'height')); // sa returneze un array de obiecte cu height < 10
 
 /*
