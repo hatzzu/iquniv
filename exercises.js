@@ -117,6 +117,17 @@ console.log("----------------------------------------------------------");
 /*
 10. Sa se scrie o functie care returneaza un array cu toate elementele care au o culoare unica. Oricare element dupa primul care are o culoare care s-ar repeta nu este inclus in array.
 */
+function uniqueColors(arr) {
+    const arrColors = new Array();
+    return arr.filter((el) => {
+        const color = el.color;
+        if (!arrColors.includes(color)) {
+            arrColors.push(color);
+            return el;
+        }
+    });
+}
+
 console.log(uniqueColors(demoArr));
 
 /*
