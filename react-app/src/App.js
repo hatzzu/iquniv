@@ -23,7 +23,7 @@ class App extends React.Component{
         />
         {this.state.a}
         <hr />
-        <Input
+        <input
           ref="b"
           onChange={this.update.bind(this)}
         />
