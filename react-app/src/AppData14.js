@@ -35,4 +35,5 @@ class App extends React.Component {
 }
 
 const Person = (props) => <h4> {props.person.name}</h4>
+
 export default App
