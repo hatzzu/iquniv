@@ -4,7 +4,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <App cat={5} />, 
+    <App />, 
     document.getElementById('root')
 );
 
