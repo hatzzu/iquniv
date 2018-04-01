@@ -1,5 +1,4 @@
 import React from "react";
-// import ReactDOM from 'react-dom'
 
 class App extends React.Component{
 
@@ -36,4 +35,5 @@ class App extends React.Component{
 }
 
 const Person = (props) => <h4> {props.person.name}</h4>
+
 export default App
