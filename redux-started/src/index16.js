@@ -92,7 +92,7 @@ store.dispatch({
 console.log('Current state:');
 console.log(store.getState());
 console.log('--------------');
-
+ 
 console.log('Dispatching TOGGLE_TODO.');
 store.dispatch({
     type: 'TOGGLE_TODO',
